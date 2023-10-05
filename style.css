@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:"Hanken Grotesk";
+    overflow-x: hidden;
+}
+p{
+    font-size: 18px;
+}
+
+
+.container{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50%  -50%;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    box-shadow: .2rem .2rem 1rem rgb(112, 112, 112);
+    & .result{
+        width: 50%;
+        text-align: center;
+        padding: 1.2em 3em;
+        background: linear-gradient(hsl(252, 100%, 67%) ,
+         hsl(241, 81%, 54%));
+        color: white;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1.8rem;
+
+        & h3 , p{
+            color: rgba(255, 255, 255, 0.5);
+        }
+        & .number{
+            border-radius: 50%;
+            text-transform: lowercase;
+            background:linear-gradient(hsla(256, 72%, 46%, 1) , 
+            hsla(241, 72%, 46%, 0));
+            padding: 2.5em 3.2em;
+            margin: .1em;
+
+            & h1{
+                font-size: 3.7em;
+                margin: 0;
+            }
+            & p{
+                font-size: small;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        .description{
+            text-transform: lowercase;
+            font-weight: 500;
+
+            &::first-letter{
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    & .summary{
+        width: 50%;
+        text-align: center;
+        padding: 1em ;
+        text-transform: capitalize;
+        & h2{
+            text-align: left;
+        }
+
+        & .box{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 0px 7px;
+            border-radius: 10px;
+
+            & img , .degree{
+                padding: 0 5px;
+            }
+            & .degree{
+                font-weight: 800;
+            }
+            & .max{
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            & div{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+            }
+        }
+
+        & .continue-btn{
+            background-color: rgb(44, 44, 44);
+            padding: 1rem .5rem ;
+            margin: 2em 0 ;
+            width: 100%;
+            border-radius: 2rem ;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        
+    }
+    
+}
+
+.reaction{
+    & .title{
+        color: hsl(0, 100%, 67%);
+    }
+    background-color: hsla(0, 100%, 67%, 0.25);
+}
+
+.memory{
+    & .title{
+        color: hsl(39, 100%, 56%);
+    }
+    background-color:  hsla(39, 100%, 56%, 0.25);
+}
+
+.verbal{
+    & .title{
+        color: hsl(166, 100%, 37%);
+    }
+    background-color: hsla(166, 100%, 37%, 0.25);
+}
+
+.visual{
+    & .title{
+        color: hsl(234, 85%, 45%);
+    }
+    background-color:hsla(234, 85%, 45%, 0.25);
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .container{
+        position: absolute;
+        left: 0;
+        top: 0;
+        translate: 0 0;
+        width: 100vw;
+        flex-direction: column;
+
+        & .result {
+            width: 99vw;
+            height: 100%;
+            padding: 1em 2em ;
+            border-radius: 0;
+            border-bottom-left-radius: 2rem ;
+            border-bottom-right-radius: 2rem;
+        }
+
+        & .summary{
+            width: 100%;
+            padding: 1rem 2rem ;
+        }
+    }
+}
